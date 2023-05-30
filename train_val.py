@@ -190,7 +190,7 @@ if __name__=='__main__':
                 writer.add_scalar("total_loss",loss.mean(),step)
                 writer.add_scalar("learning rate",lr,step)
 
-            if (epoch_step + 1) % 170 == 0:
+            if (epoch_step + 1) % 1700 == 0:
                 tb_iter += 1
                 torch.save(model.state_dict(),
                         "./checkpoint/model_{}.pth".format(epoch + 1))
