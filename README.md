@@ -24,9 +24,9 @@
 
    ```
    python train_val.py  	--epochs 30		# 训练周期数
-   						      --batch_size 4	
-   						      --n_cpu 16
-   						      --n_gpu '0,1'	# 指定GPU
+                           --batch_size 4	
+                           --n_cpu 16
+                           --n_gpu '0,1'	# 指定GPU
    ```
 
 3. 训练结果：训练过程中每个epoch最后的模型会以`model_{epoch}.pth`的形式保存在`checkpoint`文件夹中，tensorboard事件文件保存在`runs/FCOS`文件夹中，共记录了训练cln_loss、cnt_loss、reg_loss、total_loss、learning_rate、测试mAP、test_loss7个值，并且可视化了训练过程中的`visualize`文件夹中图像的检测结果，可以通过如下命令查看：
